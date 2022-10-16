@@ -8,5 +8,5 @@
 5. $pkg install curl
 6. $git clone https://github.com/MiftachurRifqi/dortri
 7. $cd dortri
-8. $php dortri.php --three
+8. $php dortri.php
 
