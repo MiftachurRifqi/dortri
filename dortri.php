@@ -8,11 +8,11 @@ By: Mft.Rfq
 PASTIKAN PULSA CUKUP SEBELUM DOR \n\n");
 echo @color('red',"Note: Jika status sukses tetapi pulsa tidak terpotong brati gangguan ya! \n\n");
 
-echo @color('green', "\tNomor kamu (089xxxxnx.com)\n\t: ");
+echo @color('green', "\tNomor kamu\n\t: ");
 $nomor = trim(fgets(STDIN));
 $login = login($nomor);
 echo @color('yellow', $login['message']."\n");
-echo @color('green', "\tOTP BOS\n\t: ");
+echo @color('green', "\tKode OTP\n\t: ");
 $otp = trim(fgets(STDIN));
 $login = otplogin($nomor,$otp);
 if (strpos(json_encode($login), '"status":true')) {
@@ -36,7 +36,7 @@ if (strpos(json_encode($login), '"status":true')) {
     cek:
     echo @color('red', "Silahkan dipilih:\n\n\n\n");
     echo @color('nevy', "[1] Reward 5GB 1hari Harga\t: Rp 1\n[2] 25GB 30hari Harga\t\t: Rp 25000\n[3] 55GB 30 Hari Harga\t\t: Rp 50000\n[4] 65GB 30 Hari Harga\t\t: Rp 60000\n[5] 75GB 30 Hari Harga\t\t: Rp 75000\n[6] 90GB 30 Hari Harga\t\t: Rp 90000\n[7] 100GB 30 Hari Harga\t\t: Rp 90000\n\n\n\n");
-    echo @color('green', "List kuota: ");
+    echo @color('green', "Pilih kuota yang diinginkan: ");
     $pilih = trim(fgets(STDIN));
     switch ($pilih) {
             case '1':
